@@ -1,8 +1,8 @@
 name: zoomable_tilt_view
-description: A new Flutter package project.
+description: Tilt-view widget to add some juiciness to your app.
 version: 0.0.1
-author:
-homepage:
+author: Hannes Kinnunen<hankilapio@gmail.com>
+homepage: https://github.com/Steellow/zoomable_tilt_view
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
