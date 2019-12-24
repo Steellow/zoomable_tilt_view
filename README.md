@@ -1,6 +1,8 @@
 # zoomable_tilt_view
 ZoomableTiltView is simple widget to add some juiciness to your app. 
 
+![Example gif](gifs/example.gif)
+
 ## Usage
 
 Simply import the package and wrap it inside ZoomableTiltView widget.
