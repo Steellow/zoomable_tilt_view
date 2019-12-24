@@ -31,9 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ZoomableTiltView(
           yTiltLimit: 50,
           xTiltLimit: 50,
-          tiltSensitivity: 2,
-          zoomLimit: 2,
-          zoomAlignment: Alignment.center,
+          tiltSensitivity: 1.5,
+          zoomLimit: 1.8,
           child: Container(
             height: 200,
             width: 200,
