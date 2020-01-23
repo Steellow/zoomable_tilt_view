@@ -3,20 +3,25 @@ library zoomable_tilt_view;
 import 'package:flutter/material.dart';
 
 class ZoomableTiltView extends StatefulWidget {
-  // How much view can be tilted on Y and X axis
+  // How much view can be tilted on Y axis
   final int yTiltLimit;
+
+  // How much view can be tilted on X axis
   final int xTiltLimit;
 
+  // How easily the view tilts, default value 1.0
   final double tiltSensitivity;
+
+  // How fast the tilt resets after you release the hold
   final Duration tiltResetAnimationDuration;
 
   // How much the child zooms when pressed
   final double zoomLimit;
 
-  // How fast the child zooms in and out
+  // How fast the child zooms in and out. Usually faster than tiltResetAnimationDuration
   final Duration zoomAnimationDuration;
 
-  // Where the zoom starts
+  // Where the zoom starts, defaults to Alignment.center. If the view is on the right side of the screen you might want to use Alignment.right, for example.
   final Alignment zoomAlignment;
 
   final Widget child;
@@ -116,7 +121,7 @@ class _ZoomableTiltViewState extends State<ZoomableTiltView>
         transform: Matrix4.identity()
           ..setEntry(3, 2, 0.001)
           ..rotateX(
-              _yController.value * 0.01) // ? Is the Y and X values reversed?
+              _yController.value * 0.01)
           ..rotateY(_xController.value * -0.01),
         alignment: FractionalOffset.center,
         child: GestureDetector(
